@@ -5,7 +5,6 @@ class apache {
   require homebrew
   require apache::config
 
-
   # Set up all the files and directories apache expects. We go
   # nonstandard on this mofo to make things as clearly accessible as
   # possible under $BOXEN_HOME.
@@ -27,6 +26,12 @@ class apache {
     ensure => directory,
     recurse => true,
     source => 'puppet:///modules/apache/htdocs'
+  }
+
+  file { "${boxen::config::bindir}/apachectl":
+    content => template('apache/apachectl.erb'),
+    mode    => '0755',
+    require => Package['apache24'],
   }
 
 
