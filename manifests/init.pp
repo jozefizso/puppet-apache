@@ -35,7 +35,7 @@ class apache {
   }
 
 
-  homebrew::tap { 'jozefizso/dupes': }
+  homebrew::tap { 'homebrew/dupes': }
   homebrew::tap { 'jozefizso/apache2': }
 
   package { 'apache24':
