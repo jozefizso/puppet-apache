@@ -1,21 +1,17 @@
-# Template Puppet Module for Boxen
+# Apache Web Server Puppet Module for Boxen
 
-An example of how we write Puppet modules for Boxen. Replace this
-paragraph with a short explanation of what the heck makes your module
-useful.
+Puppet module for Boxen for managing **Apache Web Server** for PHP developers.
 
 ## Usage
 
 ```puppet
-boxen::example { 'best example ever':
-  salutation => 'fam'
-}
+include apache
 ```
 
 ## Required Puppet Modules
 
 * `boxen`
-* `anything-else`
+* `homebrew`
 
 ## Development
 
